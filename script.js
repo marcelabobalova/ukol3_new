@@ -64,7 +64,7 @@ numbers.forEach((num) => {
 // Vypište do stránky jak daleko je každé číslo v seznamu od čísla 5.
 document.body.innerHTML += `<h2>Jak daleko je každé číslo daleko od čísla pět</h2>`
 numbers.forEach((num) => {
-    document.body.innerHTML += `<p>${num - 5}</p>`
+    document.body.innerHTML += `<p>${Math.abs(num - 5)}</p>`
 })
 
 //Vypište do stránky druhé mocnicny vzdáleností všech čísel od čísla 5.
@@ -74,13 +74,13 @@ numbers.forEach((num) => {
 })
 
 //Spočítejte, kolik je v seznamu záporných čísel.
-let negativeSum = 0;
+let count = 0;
 numbers.forEach(num => {
     if (num < 0) {
-        negativeSum += num;
+        count++;
     }
 })
-document.body.innerHTML += `<h2>Součet všech záporných čísel je: </h2> ${negativeSum}`
+document.body.innerHTML += `<h2>Počet záporných čísel v seznamu: </h2>${count}`
 
 //Spočítejte součet všech čísel v poli.
 let total = 0
@@ -101,7 +101,7 @@ document.body.innerHTML += `<h2>Průměr všech čísel v poli je: </h2>  ${aver
 let positiveSum = 0
 numbers.forEach(num => {
     if (num > 0) {
-      positiveSum += num;
+        positiveSum += num;
     }
-  });
-  document.body.innerHTML += `<h2>Součet všech kladných čísel v poli je: </h2> ${positiveSum}`
+});
+document.body.innerHTML += `<h2>Součet všech kladných čísel v poli je: </h2> ${positiveSum}`
